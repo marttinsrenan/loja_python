@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body id="adicionar-produto">
+    <h1>Adicionar Produto</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="nome">Nome do Produto:</label>
+        <input type="text" name="nome" required>
+        <br>
+        <label for="preco">Preço:</label>
+        <input type="number" name="preco" step="0.01" required>
+        <label for="imagem">Imagem do Produto:</label>
+        <input type="file" name="imagem" accept="image/*" required>
+        <br>
+        <input type="submit" value="Adicionar">
+    </form>
+</body>
+</html>
